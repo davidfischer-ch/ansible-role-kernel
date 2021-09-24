@@ -17,8 +17,12 @@ kernel_dynamic_defaults:
     kernel_packages:
       - kernel-headers
 
-  ubuntu17.*:
+  ubuntu-17.*:
     kernel_packages:
       - linux-headers-lowlatency
+
+  ubuntu-20.*:
+    kernel_packages:
+      - linux-generic
 
 kernel_get_config: yes
