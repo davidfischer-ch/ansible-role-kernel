@@ -25,4 +25,8 @@ kernel_dynamic_defaults:
     kernel_packages:
       - linux-generic
 
+  ubuntu-22.*:
+    kernel_packages:
+      - linux-base
+
 kernel_get_config: yes
