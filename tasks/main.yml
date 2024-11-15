@@ -5,7 +5,7 @@
     - dynamic_defaults:
         hostvars: '{{ hostvars[inventory_hostname] }}'
         defaults: '{{ kernel_dynamic_defaults }}'
-        must_match: yes
+        must_match: true
 
     - name: Get current GNU/Linux Kernel configuration
       kernel_facts:
@@ -13,8 +13,8 @@
   tags: [kernel, always]
 
 - name: Install GNU/Linux kernel packages
-  package:
+  ansible.builtin.package:
     name: '{{ kernel_packages }}'
     state: present
-  become: yes
+  become: true
   tags: [kernel, packages]

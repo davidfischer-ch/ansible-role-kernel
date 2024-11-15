@@ -4,11 +4,6 @@ kernel_dynamic_defaults:
     kernel_packages:
       - kernel-devel
 
-  linux:
-    kernel_packages:
-      - linux-generic
-      - linux-signed-generic
-
   debian-8.9:
     kernel_packages:
       - linux-base
@@ -29,4 +24,8 @@ kernel_dynamic_defaults:
     kernel_packages:
       - linux-base
 
-kernel_get_config: yes
+  ubuntu-24.*:
+    kernel_packages:
+      - linux-base
+
+kernel_get_config: true
